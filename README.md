@@ -15,7 +15,7 @@ en cuenta que el dispositivo tenga activada las opciones del desarrollador
 y la depuración USB, con esta configuración podremos ver que aparece como servicio
 nuestro dispositivo movil en la parte inferior de nuestro SDK Visual Studio Code.
 
-![](https://github.com/CarlosManchego343/AplicacionClima/blob/main/WhatsApp%20Image%202024-08-23%20at%209.52.07%20AM.jpeg)
+![](https://github.com/CarlosManchego343/AplicacionClima/blob/main/imagen%20de%20configuracion%201.jpeg)
 
 Una vez se hace la configuración se puede hacer la instalación del APK
 del proyecto en el dispositivo movil desde una terminal de Visual Studio Code con el siguiente comando:
