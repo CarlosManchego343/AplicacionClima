@@ -147,9 +147,7 @@ class _PrincipalScreenState extends State<PrincipalScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ForecastScreen(
-                            weatherData: weatherData,
-                          ),
+                          builder: (context) => ForecastScreen(),
                         ),
                       );
                     },
