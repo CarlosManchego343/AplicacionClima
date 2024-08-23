@@ -14,6 +14,19 @@ class _PrincipalScreenState extends State<PrincipalScreen> {
   final String _apiKey = '06968c7563f4ece42f9b92753b3a6809';
   Future<Map<String, dynamic>>? _weatherDataFuture;
 
+  // Mapa de traducciones de descripciones del clima
+  final Map<String, String> weatherTranslations = {
+    'clear sky': 'cielo claro',
+    'few clouds': 'pocas nubes',
+    'scattered clouds': 'nubes dispersas',
+    'broken clouds': 'nubes rotas',
+    'shower rain': 'lluvia ligera',
+    'rain': 'lluvia',
+    'thunderstorm': 'tormenta eléctrica',
+    'snow': 'nieve',
+    'mist': 'niebla',
+  };
+
   @override
   void initState() {
     super.initState();
@@ -24,8 +37,9 @@ class _PrincipalScreenState extends State<PrincipalScreen> {
     bool serviceEnabled = await location.serviceEnabled();
     if (!serviceEnabled) {
       serviceEnabled = await location.requestService();
-      if (!serviceEnabled)
+      if (!serviceEnabled) {
         throw Exception("El servicio de localización está deshabilitado.");
+      }
     }
 
     PermissionStatus permissionGranted = await location.hasPermission();
@@ -59,7 +73,9 @@ class _PrincipalScreenState extends State<PrincipalScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[100],
       appBar: AppBar(
+        backgroundColor: Colors.blue[900],
         title: const Text("Clima actual"),
       ),
       body: FutureBuilder<Map<String, dynamic>>(
@@ -87,29 +103,42 @@ class _PrincipalScreenState extends State<PrincipalScreen> {
             final latitude = coord['lat'];
             final longitude = coord['lon'];
 
+            // Obtener la descripción traducida
+            final translatedDescription =
+                weatherTranslations[description] ?? description;
+
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.network(
+                Center(
+                  child: Container(
+                    width: 250,
+                    height: 250,
+                    child: Image.network(
                       'http://openweathermap.org/img/wn/$iconCode.png',
-                      width: 50,
-                      height: 50,
+                      fit: BoxFit.contain,
                     ),
-                    SizedBox(width: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Clima actual: ${temperature}°C, ${description}',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ],
+                  ),
+                ),
+                SizedBox(width: 10),
+                Text(
+                  'Clima actual: ${temperature}°C',
+                  style: TextStyle(fontSize: 20),
+                ),
+                SizedBox(width: 10),
+                Text(
+                  translatedDescription,
+                  style: TextStyle(fontSize: 16),
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: _refreshWeatherData,
                   child: const Text("Actualizar"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue[900],
+                    foregroundColor: Colors.white, 
+                  ),
                 ),
                 SizedBox(height: 20),
                 Center(
@@ -125,6 +154,10 @@ class _PrincipalScreenState extends State<PrincipalScreen> {
                       );
                     },
                     child: const Text("Pronóstico en 3 días"),
+                    style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue[900],
+                    foregroundColor: Colors.white, 
+                  ),
                   ),
                 ),
               ],
