@@ -8,6 +8,14 @@ El objetivo de la siguiente aplicación es la de dar el clima actual
 y el pronóstico del tercer día deacuerdo a la localización actual
 del dispositivo movil.
 
+## Api Key
+
+Se hizo uso de una Api Key la cual esta al inicio de cada pantalla la cual es la siguiente:
+
+```sh
+06968c7563f4ece42f9b92753b3a6809
+```
+
 ## ¿Como se ejecuta el proyecto?
 
 Para ejecutar el proyecto desde un dispositivo movil se ha de tener 
@@ -25,11 +33,5 @@ Una vez ejecutado el comando se visualizara el aplicativo de la siguiente manera
 ![](https://github.com/CarlosManchego343/AplicacionClima/blob/main/Captura%20de%20pantalla%20inicial.jpeg)
 ![](https://github.com/CarlosManchego343/AplicacionClima/blob/main/Captura%20de%20pantalla%20pronostico.jpeg)
 
-## Api Key
 
-Se hizo uso de una Api Key la cual esta al inicio de cada pantalla la cual es la siguiente:
-
-```sh
-06968c7563f4ece42f9b92753b3a6809
-```
 
