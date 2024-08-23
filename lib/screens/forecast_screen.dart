@@ -48,12 +48,16 @@ class _ForecastScreenState extends State<ForecastScreen> {
 
     Map<String, dynamic> weatherData = jsonDecode(response.body);
 
-    // Simulación de pronóstico para 3 días basado en datos actuales
     List<Map<String, dynamic>> forecast = List.generate(3, (index) {
       return {
         'day': 'Día ${index + 1}',
         'temp': weatherData['main']['temp'] + index * 2.0,
-        'description': _translateDescription(weatherData['weather'][0]['description']),
+        'temp_min':
+            weatherData['main']['temp_min'] - index * 1.0, // Ajuste simulado
+        'temp_max':
+            weatherData['main']['temp_max'] + index * 1.0, // Ajuste simulado
+        'description':
+            _translateDescription(weatherData['weather'][0]['description']),
         'icon': weatherData['weather'][0]['icon'],
       };
     });
@@ -123,15 +127,14 @@ class _ForecastScreenState extends State<ForecastScreen> {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  '${thirdDay['temp']}°C',
-                  style: TextStyle(fontSize: 20),
+                  'Min: ${thirdDay['temp_min']}°C  Max: ${thirdDay['temp_max']}°C',
+                  style: TextStyle(fontSize: 18),
                 ),
                 SizedBox(height: 10),
                 Text(
                   '${thirdDay['description']}',
                   style: TextStyle(fontSize: 18),
                 ),
-                
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pop(context);
@@ -139,7 +142,7 @@ class _ForecastScreenState extends State<ForecastScreen> {
                   child: const Text("Volver al inicio"),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue[900],
-                    foregroundColor: Colors.white, 
+                    foregroundColor: Colors.white,
                   ),
                 ),
               ],
