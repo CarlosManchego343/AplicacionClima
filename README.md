@@ -23,6 +23,7 @@ flutter run
 Una vez ejecutado el comando se visualizara el aplicativo de la siguiente manera
 
 ![](https://github.com/CarlosManchego343/AplicacionClima/blob/main/Captura%20de%20pantalla%20inicial.jpeg)
+![](https://github.com/CarlosManchego343/AplicacionClima/blob/main/Captura%20de%20pantalla%20pronostico.jpeg)
 
 ## Api Key
 
