@@ -14,15 +14,15 @@ Para ejecutar el proyecto desde un dispositivo movil se ha de tener
 en cuenta que el dispositivo tenga activada las opciones del desarrollador 
 y la depuración USB, con esta configuración podremos ver que aparece como servicio
 nuestro dispositivo movil en la parte inferior de nuestro SDK Visual Studio Code.
-
-![](https://github.com/CarlosManchego343/AplicacionClima/blob/main/imagen%20de%20configuracion%201.jpeg)
-
 Una vez se hace la configuración se puede hacer la instalación del APK
 del proyecto en el dispositivo movil desde una terminal de Visual Studio Code con el siguiente comando:
 
 ```sh
 flutter run
 ```
+Una vez ejecutado el comando se visualizara el aplicativo de la siguiente manera
+
+![](https://github.com/CarlosManchego343/AplicacionClima/blob/main/Captura%20de%20pantalla%20inicial.jpeg)
 
 ## Api Key
 
