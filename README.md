@@ -10,7 +10,7 @@ del dispositivo movil.
 
 ## Api Key
 
-Se hizo uso de una Api Key la cual esta al inicio de cada pantalla la cual es la siguiente:
+Se hizo uso de una Api Key la cual esta incluida al inicio de cada pantalla la cual es la siguiente:
 
 ```sh
 06968c7563f4ece42f9b92753b3a6809
