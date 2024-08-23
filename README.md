@@ -1,6 +1,6 @@
 # Aplicación sobre el clima
 
-La presente aplicación esta desarrollado bajo el framework Flutter
+La presente aplicación esta desarrollada bajo el framework Flutter
 
 ## ¿Cual es el obejetivo de la aplicación?
 
@@ -13,9 +13,9 @@ del dispositivo movil.
 Para ejecutar el proyecto desde un dispositivo movil se ha de tener 
 en cuenta que el dispositivo tenga activada las opciones del desarrollador 
 y la depuración USB, con esta configuración podremos ver que aparece como servicio
-nuestro dispositivo mobil en la parte inferior de nuestro SDK Visual Studio Code.
+nuestro dispositivo movil en la parte inferior de nuestro SDK Visual Studio Code.
 Una vez se hace la configuración se puede hacer la instalación del APK
-del proyecto en el dispositivo mobil desde una terminal de Visual Studio Code con el siguiente comando:
+del proyecto en el dispositivo movil desde una terminal de Visual Studio Code con el siguiente comando:
 
 ```sh
 flutter run
