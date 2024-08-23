@@ -1,16 +1,31 @@
-# aplicacion_clima
+# Aplicación sobre el clima
 
-A new Flutter project.
+La presente aplicación esta desarrollado bajo el framework Flutter
 
-## Getting Started
+## ¿Cual es el obejetivo de la aplicación?
 
-This project is a starting point for a Flutter application.
+El objetivo de la siguiente aplicación es la de dar el clima actual
+y el pronóstico del tercer día deacuerdo a la localización actual
+del dispositivo movil.
 
-A few resources to get you started if this is your first Flutter project:
+## ¿Como se ejecuta el proyecto?
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Para ejecutar el proyecto desde un dispositivo movil se ha de tener 
+en cuenta que el dispositivo tenga activada las opciones del desarrollador 
+y la depuración USB, con esta configuración podremos ver que aparece como servicio
+nuestro dispositivo mobil en la parte inferior de nuestro SDK Visual Studio Code.
+Una vez se hace la configuración se puede hacer la instalación del APK
+del proyecto en el dispositivo mobil desde una terminal de Visual Studio Code con el siguiente comando:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```sh
+flutter run
+```
+
+## Api Key
+
+Se hizo uso de una Api Key la cual esta al inicio de cada pantalla la cual es la siguiente:
+
+```sh
+06968c7563f4ece42f9b92753b3a6809
+```
+
